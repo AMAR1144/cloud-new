@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Dashboard - College Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">🎓 ScholarTrack</div>
+        <ul class="sidebar-menu">
+            <li class="active"><a href="index.html">Dashboard</a></li>
+            <li><a href="warnings.html">Warning & Notices</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Section -->
+    <main class="main-content">
+        <header>
+            <h1>Daily Attendance Dashboard</h1>
+            <span style="color: var(--text-muted); font-size: 0.875rem;">Date: Today</span>
+        </header>
+
+        <div class="container">
+            <!-- Stats overview -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Students</h3>
+                    <div class="value" id="totalStudents">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Present Today</h3>
+                    <div class="value" style="color: var(--success);" id="presentCount">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Absent Today</h3>
+                    <div class="value" style="color: var(--danger);" id="absentCount">0</div>
+                </div>
+            </div>
+
+            <!-- Attendance Table Section -->
+            <div class="card-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Roll Number</th>
+                            <th>Student Name</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="attendanceTableBody">
+                        <!-- Populated via script.js -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Warnings - College Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">🎓 ScholarTrack</div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html">Dashboard</a></li>
+            <li class="active"><a href="warnings.html">Warning & Notices</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Section -->
+    <main class="main-content">
+        <header>
+            <h1>Absence Warning & Notice Generator</h1>
+            <span style="color: var(--text-muted); font-size: 0.875rem;">Automated Dispatcher</span>
+        </header>
+
+        <div class="container">
+            <div style="background: var(--card-bg); padding: 2rem; border-radius: 8px; border: 1px solid var(--border);">
+                <h3 style="margin-bottom: 1rem;">Generate Attendance Alert</h3>
+                
+                <div class="form-group">
+                    <label for="studentSelect">Select Defaulter Student</label>
+                    <select id="studentSelect">
+                        <!-- Populated via script.js -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Generated Notice / Temporary Warning Email Preview</label>
+                    <div class="preview-box" id="emailPreview">
+                        <!-- Preview dynamically rendered here -->
+                    </div>
+                </div>
+
+                <button onclick="sendWarningEmail()">Send Warning Notice Now</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
